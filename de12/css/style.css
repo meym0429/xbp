@@ -27,10 +27,12 @@ html, body {
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #efefef;
+	background:#F7F2E8;
 }
 h1{
     text-indent: 0em;
+    text-align: center;
+  font-size: 48px;
 }
 h2{
     margin-left: 1em;
