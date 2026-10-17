@@ -23,11 +23,11 @@ logotohome img{
 /* ========== common ========== */
 html, body {
 	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background:#F7F2E8;
+  font-family: sans-serif;
+  color: #f2eee7;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  background: #101521;
 }
 h1{
     text-indent: 0em;
@@ -37,9 +37,11 @@ h1{
 h2{
     margin-left: 1em;
     margin-top: 1em;
+     text-align: center;
 }
 h3{
     margin-left: 2em;
+     text-align: center;
 }
 div{
     margin-top: 1em;
@@ -53,4 +55,19 @@ span.blackback{
     background: #393939;
     color: #F7F2E8;
 }
+h1, h2, h3 {
+  color: #f2b84b;
+}
 
+a {
+  color: #70c9d4;
+}
+
+a:hover {
+  color: #f2b84b;
+}
+
+span.blackback {
+  background: #293246;
+  color: #f2eee7;
+}
