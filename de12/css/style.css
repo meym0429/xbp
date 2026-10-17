@@ -71,3 +71,32 @@ span.blackback {
   background: #293246;
   color: #f2eee7;
 }
+/* デザイン演習一覧ページ */
+body.index-page {
+  background: #f4f6fa;
+  color: #202536;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+body.index-page h1 {
+  color: #202536;
+  letter-spacing: 0.04em;
+}
+
+body.index-page h2 {
+  color: #5661d8;
+}
+
+body.index-page a {
+  color: #5364d8;
+  text-decoration: none;
+}
+
+body.index-page a:hover {
+  color: #303da8;
+  text-decoration: underline;
+}
+body.index-page h2 {
+  text-align: left;
+  margin-left: 3em;
+}
