@@ -73,30 +73,44 @@ span.blackback {
 }
 /* デザイン演習一覧ページ */
 body.index-page {
-  background: #f4f6fa;
-  color: #202536;
+  background: #f7f6f2;
+  color: #252522;
   font-family: "M PLUS Rounded 1c", sans-serif;
+  margin: 0;
+  padding: 48px 6%;
 }
 
 body.index-page h1 {
-  color: #202536;
-  letter-spacing: 0.04em;
+  color: #252522;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin: 40px 0 64px;
 }
 
 body.index-page h2 {
-  color: #5661d8;
+  color: #252522;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin: 48px 0 20px;
+}
+
+body.index-page ol,
+body.index-page ul {
+  padding-left: 1.2em;
+  line-height: 2.2;
 }
 
 body.index-page a {
-  color: #5364d8;
+  color: #55544f;
   text-decoration: none;
+  border-bottom: 1px solid #c9c7c0;
 }
 
 body.index-page a:hover {
-  color: #303da8;
-  text-decoration: underline;
-}
-body.index-page h2 {
-  text-align: left;
-  margin-left: 3em;
+  color: #111;
+  border-color: #111;
 }
