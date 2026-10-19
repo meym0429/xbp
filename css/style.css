@@ -51,4 +51,25 @@ span.blackback{
     background: #393939;
     color: #efefef;
 }
+/* ポートフォリオ一覧ページ：海辺のリゾート風 */
+body.portfolio-page {
+  background: #f4f1e9;
+  color: #243640;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  padding: 32px;
+}
 
+body.portfolio-page h1,
+body.portfolio-page h2 {
+  color: #173f52;
+}
+
+body.portfolio-page a {
+  color: #27677b;
+  text-decoration: none;
+}
+
+body.portfolio-page a:hover {
+  color: #bd8258;
+  text-decoration: underline;
+}
