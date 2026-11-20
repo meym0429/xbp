@@ -1,0 +1,686 @@
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #f5f4f0;
+  color: #292929;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  padding: 0 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(245,244,240,0.92);
+  backdrop-filter: blur(12px);
+
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+#menuButton {
+  background: transparent;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+#menu {
+  position: fixed;
+  top: 85px;
+  right: 8%;
+
+  width: 260px;
+  padding: 20px;
+
+  background: #fff;
+  box-shadow: 0 10px 30px #0001;
+
+  display: none;
+  z-index: 1001;
+}
+
+#menu.open {
+  display: block;
+}
+
+#menu a {
+  display: block;
+  padding: 14px 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+#menu a:hover {
+  padding-left: 15px;
+  color: #999;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 12% 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1050px;
+}
+
+.eyebrow {
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(75px, 12vw, 135px);
+  line-height: 1.2;
+  letter-spacing: 18px;
+}
+
+.hero-subtitle {
+  color: #888;
+  letter-spacing: 5px;
+  margin: 15px 0 45px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #999;
+}
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+  min-height: 90vh;
+  padding: 140px 12%;
+}
+
+.section-heading {
+  max-width: 1050px;
+  margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 43px);
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.section-heading > p:last-child {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 4px;
+  margin-top: 10px;
+}
+
+/* =========================
+   MY WORLD
+========================= */
+
+.world-content {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.world-image {
+  height: 380px;
+  overflow: hidden;
+}
+
+.world-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.world-text h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.world-text p {
+  color: #777;
+  font-size: 13px;
+  line-height: 2.5;
+}
+
+/* =========================
+   COURSE CARD
+========================= */
+
+.course-card {
+  max-width: 1050px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+
+  background: #fff;
+  padding: 25px;
+  gap: 40px;
+
+  transition: 0.4s;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px #00000012;
+}
+
+.course-image {
+  height: 350px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.course-card:hover img {
+  transform: scale(1.04);
+}
+
+.course-text {
+  padding: 20px;
+}
+
+.course-text h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.course-text p:not(.eyebrow) {
+  color: #777;
+  font-size: 13px;
+  line-height: 2.4;
+}
+
+.course-text span {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 55px 10%;
+  text-align: center;
+  background: #eae9e5;
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+footer a {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  header {
+    height: 75px;
+    padding: 0 6%;
+  }
+
+  .hero {
+    padding: 120px 6% 60px;
+  }
+
+  .hero h1 {
+    letter-spacing: 8px;
+  }
+
+  .hero-image {
+    height: 260px;
+  }
+
+  .section {
+    padding: 110px 6%;
+  }
+
+  .world-content,
+  .course-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .world-image,
+  .course-image {
+    height: 260px;
+  }
+
+  .course-card {
+    padding: 15px;
+  }
+
+  .course-text {
+    padding: 15px 5px;
+  }
+
+  #menu {
+    right: 6%;
+    top: 75px;
+  }
+}
+
+/* 動きを減らす設定にも対応 */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* HERO IMAGE WITH TEXT */
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 文字を中央に配置 */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero-overlay .hero-small {
+  font-size: 11px;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(75px, 12vw, 130px);
+  font-weight: 300;
+  letter-spacing: 20px;
+  line-height: 1.2;
+}
+
+.hero-overlay .hero-subtitle {
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    height: 350px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 75px;
+    letter-spacing: 12px;
+  }
+
+  .hero-overlay .hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* MY WORLD GALLERY */
+
+.world-intro {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.world-intro h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.world-intro p {
+  font-size: 13px;
+  color: #777;
+  line-height: 2.4;
+}
+
+.world-gallery {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.world-photo {
+  background: white;
+  padding: 12px;
+}
+
+.world-photo img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+}
+
+.world-photo:hover img {
+  transform: scale(1.02);
+}
+
+.world-photo p {
+  padding: 15px 5px 5px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.world-photo:last-child {
+  grid-column: 1 / -1;
+}
+
+.world-photo:last-child img {
+  height: 380px;
+}
+
+@media (max-width: 700px) {
+  .world-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .world-photo:last-child {
+    grid-column: auto;
+  }
+
+  .world-photo img,
+  .world-photo:last-child img {
+    height: 250px;
+  }
+}
+
+/* =========================
+   MY WORLD SLIDESHOW
+========================= */
+
+.world-section {
+  padding: 100px 8%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  height: 680px;
+  overflow: hidden;
+  background: #333;
+}
+
+/* 写真 */
+
+.world-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.world-slide.active {
+  opacity: 1;
+}
+
+/* 暗くするフィルター */
+
+.world-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.08);
+  transition: background 1.2s ease;
+}
+
+.world-section.is-visible .world-overlay {
+  background: rgba(0, 0, 0, 0.42);
+}
+
+/* 中央の文字 */
+
+.world-copy {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+  padding: 25px;
+
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1.2s ease,
+              transform 1.2s ease;
+}
+
+.world-section.is-visible .world-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.world-label {
+  font-size: 11px;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+}
+
+.world-copy h2 {
+  font-size: clamp(30px, 5vw, 55px);
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 25px;
+}
+
+.world-description {
+  font-size: 14px;
+  line-height: 2.5;
+  letter-spacing: 2px;
+}
+
+.world-caption {
+  position: absolute;
+  bottom: 75px;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+/* 写真の切り替え表示 */
+
+.slide-indicators {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+}
+
+.indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  transition: 0.5s;
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+/* スマートフォン */
+
+@media (max-width: 700px) {
+
+  .world-section {
+    padding: 80px 5%;
+    min-height: 85vh;
+  }
+
+  .world-slideshow {
+    height: 550px;
+  }
+
+  .world-copy h2 {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+
+  .world-description {
+    font-size: 11px;
+  }
+
+  .world-caption {
+    bottom: 70px;
+  }
+}

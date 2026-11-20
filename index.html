@@ -1,28 +1,312 @@
+
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <title>XBP_HPsample</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XBP | My Portfolio</title>
+
+  <link rel="stylesheet" href="./css/home.css">
 </head>
-<body><body class="portfolio-page"></body>
 
-    <logotohome>
-    <a href="./index.html"><img src="./images/0_XBlogo.png" alt=""></a>
-    </logotohome>
-    <h1>XBP</h1>
-        <h2>まえやまのポートフォリオ一覧</h2>
-        <!-- このようにするとコードとして認識されない。（メモができる）-->
-        <!--番号付きのリスト-->
-        <ol>
-            <li><a href="./de12/index.html">デザイン演習Ⅰ・Ⅱ</a></li>
-            <li><a href="./digi_fab/index.html">デジタルファブリケーション</a></li>
-        </ol>
+<body>
 
-            
-        <br>
-        <br>
+  <!-- HEADER -->
+  <header>
+    <a href="#home" class="logo">
+      <img src="./images/0_XBlogo.png" alt="XBP">
+      <span>XBP</span>
+    </a>
 
+    <button id="menuButton" aria-expanded="false">
+      ☰ MENU
+    </button>
+  </header>
+
+  <!-- MENU -->
+  <nav id="menu">
+    <a href="#home">HOME</a>
+    <a href="#world">私の見てる世界</a>
+    <a href="#digital">デジタルファブリケーション</a>
+    <a href="#design">デザイン演習</a>
+  </nav>
+
+  
+<!-- TOP HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div class="hero-image">
+
+      <img src="./images/main.jpg" alt="メイン写真">
+
+      <div class="hero-overlay">
+        <p class="hero-small">MY PORTFOLIO</p>
+
+        <h1>XBP</h1>
+
+        <p class="hero-subtitle">
+          〜 自分の世界を表現する 〜
+        </p>
+      </div>
+
+    </div>
+
+    <p class="scroll-text">SCROLL TO EXPLORE ↓</p>
+
+  </div>
+
+</section>
+
+
+    
+
+<!-- MY WORLD -->
+<section id="world" class="world-section">
+
+  <!-- 写真スライドショー -->
+  <div class="world-slideshow">
+
+    <img src="./images/world1.jpg"
+         class="world-slide active"
+         alt="夕暮れの山と雲海">
+
+    <img src="./images/world2.jpg"
+         class="world-slide"
+         alt="青空と草原">
+
+    <img src="./images/world3.jpg"
+         class="world-slide"
+         alt="海を見渡す風景">
+
+    <!-- 写真を暗くするフィルター -->
+    <div class="world-overlay"></div>
+
+    <!-- 写真の上に表示する文字 -->
+    <div class="world-copy">
+
+      <p class="world-label">MY PERSPECTIVE</p>
+
+      <h2>私の見てる世界</h2>
+
+      <p class="world-description">
+        日常の中にある、何気ない景色。<br>
+        自分の目で見つけた世界を写真に残す。
+      </p>
+
+      <p class="world-caption">
+        MY WORLD / 2026
+      </p>
+
+    </div>
+
+    <!-- 写真の枚数表示 -->
+    <div class="slide-indicators">
+      <span class="indicator active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+    <!-- DIGITAL FABRICATION -->
+    <section id="digital" class="section">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / DIGITAL FABRICATION</p>
+        <h2>デジタルファブリケーション</h2>
+        <p>IDEA TO CREATION</p>
+      </div>
+
+      <a href="./digi_fab/index.html"
+         class="course-card reveal">
+
+        <div class="course-image">
+          <img src="./digi_fab/images/S__29523973.jpg"
+               alt="デジタルファブリケーション">
+        </div>
+
+        <div class="course-text">
+          <p class="eyebrow">DIGITAL FABRICATION</p>
+          <h3>デジタルファブリケーション</h3>
+
+          <p>
+            デジタル技術を活用したものづくり。
+            授業で制作した作品や、
+            学んだことを紹介します。
+          </p>
+
+          <span>VIEW MORE →</span>
+        </div>
+
+      </a>
+
+    </section>
+
+    <!-- DESIGN -->
+    <section id="design" class="section">
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / DESIGN</p>
+        <h2>デザイン演習</h2>
+        <p>THINK AND DESIGN</p>
+      </div>
+
+      <a href="./de12/index.html"
+         class="course-card reveal">
+
+        <div class="course-image">
+          <img src="./de12/images/0_XBlogo.png"
+               alt="デザイン演習">
+        </div>
+
+        <div class="course-text">
+          <p class="eyebrow">DESIGN EXERCISE</p>
+          <h3>デザイン演習 I・II</h3>
+
+          <p>
+            デザインについて考え、
+            アイデアを形にする。
+            授業で制作した作品や演習内容を紹介します。
+          </p>
+
+          <span>VIEW MORE →</span>
+        </div>
+
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>XBP MY PORTFOLIO</p>
+    <p>© 2026</p>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
+
+  <script>
+
+    // MENUの開閉
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menu =
+      document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+
+      const opened =
+        menu.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        opened
+      );
+
+    });
+
+    // メニュー選択後に閉じる
+    menu.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        menu.classList.remove("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+    // スクロールアニメーション
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".reveal").forEach(el => {
+      observer.observe(el);
+    });
+
+// =========================
+// MY WORLD SLIDESHOW
+// =========================
+
+const worldSlides =
+  document.querySelectorAll(".world-slide");
+
+const indicators =
+  document.querySelectorAll(".indicator");
+
+let currentSlide = 0;
+
+function changeSlide() {
+
+  worldSlides[currentSlide].classList.remove("active");
+  indicators[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + 1) % worldSlides.length;
+
+  worldSlides[currentSlide].classList.add("active");
+  indicators[currentSlide].classList.add("active");
+
+}
+
+// 5秒ごとに写真を切り替える
+setInterval(changeSlide, 5000);
+
+
+// スクロールしたら文字と暗いフィルターを表示
+
+const worldSection =
+  document.querySelector(".world-section");
+
+const worldObserver = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        worldSection.classList.add("is-visible");
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.35
+  }
+);
+
+worldObserver.observe(worldSection);
+
+  </script>
 
 </body>
 </html>
