@@ -684,3 +684,9 @@ footer a {
     bottom: 70px;
   }
 }
+.world-slideshow {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
